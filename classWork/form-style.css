@@ -1,0 +1,57 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color: gray;
+}
+.container{
+    background-color: white;
+    border-radius: 5px;
+    padding: 10px;
+}
+.col-md-6, .col-md-5{
+    border: 1px solid rgb(187, 185, 185);
+    border-radius: 10px;
+    box-shadow: 0 0 3px gray;
+}
+.btn{
+    margin: 10px;
+}
+
+/* toggle button css */ 
+
+#frame {
+    width: 100px;
+    height: 35px;
+    border-radius: 25px;
+    border: 1px solid black;
+    padding: 5px;
+    position: relative;
+}
+
+#frame:hover {
+    cursor: pointer;
+}
+
+#button {
+    width: 30px;
+    height: 28px;
+    background-color: gray;
+    border-radius: 50%;
+    position: absolute;
+    top: 2px;
+}
+.bg{
+    background-color: darkslategray;
+    box-shadow: 0 0 3px black;
+    color: white;
+}
+.btnchange{
+    background-color: transparent;
+    border-color: white;
+}
+.right {
+    right: 2px;
+}

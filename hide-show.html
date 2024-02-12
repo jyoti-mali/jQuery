@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hide Show Toggle</title>
+    <script src="js/jquery.js"></script>
+</head>
+
+<body>
+    <style>
+        #box {
+            width: 400px;
+            height: 300px;
+            background-color: pink;
+            border: 1px solid black;
+            padding: 10px;
+        }
+    </style>
+    <div>
+        <button id="btnhide">Hide</button>
+        <button id="btnshow">Show</button>
+        <button id="btntoggle">Toggle</button>
+        <button id="btnfadeOut">FadeOut</button>
+        <button id="btnfadeIn">FadeIn</button>
+        <button id="btnfadeToggle">FadeToggle</button>
+        <button id="btnfadeTo">FadeTo</button>
+    </div>
+    <br>
+    <div id="box">
+        <h2>Paragraph Heading</h2>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis recusandae expedita qui unde quod vel
+            quisquam esse, officiis alias molestias ea omnis. Praesentium deleniti optio eveniet nihil eum dolores quos.
+        </p>
+    </div>
+  
+    <script>
+        $(function(){
+            $('#btnhide').click(function(){
+                $('#box').hide();
+            });   
+            
+            $('#btnshow').click(function(){
+                $('#box').show();
+            });  
+
+            $('#btntoggle').click(function(){
+                $('#box').toggle();
+            }); 
+
+            $('#btnfadeOut').click(function(){
+                $('#box').fadeOut('slow',function(){
+                //    alert("fadeout") callback function
+                });
+            }); 
+
+            $('#btnfadeIn').click(function(){
+                $('#box').fadeIn();
+            }); 
+
+            $('#btnfadeToggle').click(function(){
+                $('#box').fadeToggle(1000,);
+            }); 
+
+            $('#btnfadeTo').click(function(){
+                $('#box').fadeTo(2000,.5);
+            }); 
+
+        });
+    </script>
+
+</body>
+</html>

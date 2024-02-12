@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="../js/jquery.js"></script>
+    <style>
+        p:nth-child(3){
+            background-color: green;
+        }
+        P{
+            background-color: lightblue;
+            height: 30px;
+        }
+    </style>
+</head>
+
+<body>
+   
+    <p class="first">  First Paragraph strart here </p>
+    <p>Second Paragraph Start here</p>
+    <p id="para">Third Paragraph strart here.</p>
+    <button id="btn">Click here</button>
+    <p class="changed">changed paragraph when click on it</p>
+    <script>
+
+        $('#btn').click(function(){
+            $('.first').html('Paragraph Changed !')
+            $('#para').width('200px');
+            $('#para').height('100px');
+            $('#para').html('Hello dear student');
+            $('#para').css('color','white');
+            $('#first').hide();
+        });
+
+        $('.changed').click(function(){
+            $(this).html('Paragraph Changed !')
+        });
+    </script>
+</body>
+
+</html>

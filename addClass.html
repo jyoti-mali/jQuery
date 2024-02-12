@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Class</title>
+    <script src="js/jquery.js"></script>
+</head>
+<body>
+    <style>
+        #box {
+            width: 400px;
+            height: 300px;
+            padding: 10px;
+        }
+        .first{
+            background-color: rgb(219, 163, 91);
+            font-size: 20px;
+            color: white;
+            border: 2px solid black;
+        }
+    </style>
+    <div id="box" class="first">
+        <h1>Add Class And Remove Class</h1>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur officia laudantium ratione explicabo quae aliquid sint hic delectus aspernatur consectetur.</p>
+    </div> <br>
+    <script>
+        // $(document).ready(function(){
+        //     $("#box").click(function(){
+        //         $(this).addClass('first');
+        //     });
+        // });
+
+        // $(document).ready(function(){
+        //     $("#box").click(function(){
+        //         $(this).removeClass('first');
+        //     });
+        // });
+
+        $(document).ready(function(){
+            $("#box").click(function(){
+                $(this).toggleClass('first');
+            });
+        });
+    </script>
+</body>
+</html>

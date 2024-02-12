@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script> -->
+    <script src="js/jquery.js"></script>
+    <script>
+        $(document).ready(function () {
+            $("#button").click(function() {
+                $("#div").animate({
+                    left: '250px',
+                });
+                $("#div").animate({
+                    opacity: '0.5',
+                    height: '+=30px',
+                    width: '+=30px'
+                });
+            });
+
+
+            $("#slide").click(function () {
+                var div = $(this);
+                div.animate({ height: '300px', opacity: '0.4' }, "slow");
+                div.animate({ width: '300px', opacity: '0.8' }, "slow");
+                div.animate({ height: '100px', opacity: '0.4' }, "slow");
+                div.animate({ width: '100px', opacity: '0.8' }, "slow");
+            });
+
+            $("#togglebtn").click(function(){
+                $('#toggleDiv').animate({
+                    height:'toggle',
+                    width:'toggle'
+                },4000);
+            });
+
+            $("#stopbtn").click(function(){
+                $("#toggleDiv").stop()
+            });
+        });
+    </script>
+</head>
+
+<body>
+
+    <button id="button">Start Animation</button>
+    <div id="div" style="background:#98bf21;height:100px;width:100px;position:absolute;"></div>
+    <div id="slide" style="background:#60cbcd;height:100px;width:100px;position:absolute;left:500px"></div>
+    <div id="toggleDiv" style="background:#e158ba;height:100px;width:100px;position:absolute;top:300px"></div>
+    <button id="togglebtn" style="position: absolute;top: 300px;">Toggle Div</button>
+    <button id="stopbtn" style="position: absolute; top: 300px; left: 200px;">Stop</button>
+</body>
+
+</html>

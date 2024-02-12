@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jquery get html,text,val,attr</title>
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"></script>
+    <style>
+        p {
+            background-color: yellowgreen;
+            height: 40px;
+        }
+
+        .go {
+            background-color: yellow;
+        }
+    </style>
+</head>
+
+<body>
+    <p id="para">this is a paragraph <b>click here</b></p>
+    <input type="text" class="name" value="treemiti">
+    <button id="btn" value="submit"> click here </button>
+    <script>
+        $('#para').click(function () {
+
+            // ============== get ==================
+            //    alert( "show text : " + $(this).text());
+
+            //    alert( "show HTML : " + $(this).html());
+
+            // alert( "show attribute : " + $(this).attr('id'));
+            // alert($('#btn').val());
+
+            //=========== set ==================
+            $('#para').html('<h1>paragraph has been changed!</h1>');
+            $(this).text('paragraph has been changed!');
+            //this means current element that is ('#para')
+            $(this).attr('class', 'go');
+            // $('#btn').val('reset');
+
+        });
+
+        $('#btn').click(function () {
+            // alert($('.name').val());
+            let n = $('.name').val();
+            $('#para').text(n);
+        });
+    </script>
+</body>
+
+</html>

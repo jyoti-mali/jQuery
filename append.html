@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Append and Prepend</title>
+    <script src="js/jquery.js"></script>
+    <script>
+        $(document).ready(function(){
+            $("#appendbtn").click(function(){
+                $("#box").append("<h2>Append some text</h2>");
+            });
+
+            $("#prependbtn").click(function(){
+                $("#box").prepend("<h2>Prepend some text</h2>");
+            });
+
+            $("#appendTobtn").click(function(){
+                $("<h2>Append some text using AppenTo</h2>").appendTo("#box");
+            });
+
+            $("#prependTobtn").click(function(){
+                $("<h2>Prepend some text usong PrependTo</h2>").prependTo("#box");
+            });
+
+        });
+
+        function appendtxt(){
+            var a = "<h1>Append Heading</h1>";
+            var b = $("<i></i>").text("Append Italic");
+            var txt = document.createElement('p');
+            txt.innerHTML = "Append New Text";
+            $('body').append(a,b,txt);
+        }
+    </script>
+</head>
+<body>
+    <style>
+         #box {
+            width: 400px;
+            height: auto;
+            background-color: pink;
+            border: 1px solid black;
+            padding: 10px;
+        }
+    </style>
+    <button id="appendbtn">Append</button>
+    <button id="prependbtn">Prepend</button>
+    <button id="appendTobtn">AppendTo</button>
+    <button id="prependTobtn">PrependTo</button> <br><br>
+    <div id="box">
+        <h1>Append and Prepend</h1>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur officia laudantium ratione explicabo quae aliquid sint hic delectus aspernatur consectetur.</p>
+    </div> <br>
+<button onclick="appendtxt()">Append Text</button>
+    
+</body>
+</html>

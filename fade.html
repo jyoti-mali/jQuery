@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FadeIn FadeOut FadeTo FadeToggle</title>
+    <script src="js/jquery.js"></script>
+</head>
+<body>
+    <style>
+        #box {
+           width: 400px;
+           height: auto;
+           background-color: pink;
+           border: 1px solid black;
+           padding: 10px;
+       }
+   </style>
+   <button id="fadeOutbtn">Fade Out</button>
+   <button id="fadeInbtn">Fade In</button>
+   <button id="fadeTogglebtn">Fade Toggle</button> 
+   <button id="fadeTobtn">Fade To</button> <br><br>
+    <div id="box">
+        <h1>ReplaceWith and ReplaceAll</h1>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas, est.</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas, est.</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas, est.</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas, est.</p>
+    </div>
+
+    <script>
+        $(document).ready(function(){
+
+            $("#fadeOutbtn").click(function(){
+                $("#box").fadeOut(2000);
+            });
+
+            $("#fadeInbtn").click(function(){
+                $("#box").fadeIn("slow");
+            });
+
+            $("#fadeTogglebtn").click(function(){
+                $("#box").fadeToggle();
+            });
+
+            $("#fadeTobtn").click(function(){
+                $("#box").fadeTo(3000,.5,function(){
+                    // alert("done");
+                });
+            });
+
+        });
+    </script>
+</body>
+</html>

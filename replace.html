@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ReplaceWith and ReplaceAll</title>
+    <script src="js/jquery.js"></script>
+    <script>
+        $(document).ready(function(){
+            $("#replaceWithbtn").click(function(){
+                $("#box p:nth-child(4)").replaceWith("<h1>jyoti mali</h1>");
+            });
+
+            $("#replaceAllbtn").click(function(){
+                $("<h1>jyoti mali</h1>").replaceAll("#box p");
+            });
+
+        });
+    </script>
+</head>
+<body>
+    <style>
+        #box {
+           width: 400px;
+           height: auto;
+           background-color: pink;
+           border: 1px solid black;
+           padding: 10px;
+       }
+   </style>
+   <button id="replaceWithbtn">Replace With</button>
+   <button id="replaceAllbtn">Replace All</button> <br><br>
+    <div id="box">
+        <h1>ReplaceWith and ReplaceAll</h1>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas, est.</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas, est.</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas, est.</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas, est.</p>
+    </div>
+</body>
+</html>

@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body style="margin:0">
+    <a href="https://www.yashwebdesign.com" target="_blank">click</a>
+    <p id="p">Paragraph change</p>
+    <div class="div"></div>
+
+    <div class="box"></div>
+
+    <section id="section">
+        <div id="toggle" class="toggle">
+            <div class="button"></div>
+        </div>
+        <h1>Change My background-color</h1>
+    </section>
+
+    <style>
+        .toggle {
+            border: 1px solid yellow;
+            width: 100px;
+            height: 30px;
+            padding: 4px;
+            border-radius: 25px;
+            position: relative; 
+        }
+    
+        h1{
+            color: yellow;
+        }
+
+        #toggle:hover {
+            cursor: pointer;
+        }
+
+        .button {
+            width: 30px;
+            height: 30px;
+            border-radius: 20px;
+            background-color: yellow;
+            position: absolute; 
+        }
+
+        section {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            width: 100vw;
+            height: 70vh;
+            background-color: green;
+        }
+
+        .yellowbg {
+            background-color: yellow;
+        }
+        .greenbg{
+            background-color: green;
+        }
+        .greencolor{
+            color: green;
+        }
+        .greenborder{
+           border-color: green;
+        }
+        .right{
+            right: 4px;
+        }
+    </style>
+
+<!-- 
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script> -->
+        <script src="../js/jquery.js"></script>
+    <script src="tut1.js"></script>
+</body>
+
+</html>

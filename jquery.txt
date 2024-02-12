@@ -1,0 +1,106 @@
+Q :  What is JQuery
+Ans : jQuery is a fast, small, and feature-rich JavaScript library. It makes things like HTML document traversal and manipulation, event handling, animation, and Ajax much simpler with an easy-to-use API that works across a multitude of browsers. With a combination of versatility and extensibility, jQuery has changed the way that millions of people write JavaScript.
+
+   * JQuery is Lightweight JavaScript library
+
+Benefits of JQuery :
+
+    Short selectors
+    Easy DOM manipulation
+    Easy Css styling
+    Easy Ajax code
+    variety of animations
+    browsers independent
+    coding speed
+
+Selectors :
+class : $('.className');
+id : $('.IdName);
+tag : $('TagName);
+
+Implementation :
+Download jQuery from jQuery.com - compress file - save link
+CDN path : <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+
+Syntax :
+    <script>
+        $(document).ready(function(){
+            alert();
+        });
+    </script>
+
+
+    $(Target Selector).(method{ });
+
+    $('*') 
+    $('ul li')
+    $('.test, .abc')
+    $('h1,div,p')
+    $('p:first)
+    $('p:last)
+    $('li:even')
+    $('li:odd')
+    
+    Mouse Event : 
+    click
+    dblclick
+    contextmenu (right click)
+    mouseenter
+    mouseleave
+
+    Keyboard Event :
+    keypress
+    keyup
+    keydown
+
+    Window Event :
+    resize
+    scroll
+
+    Form Event :
+    focus
+    blur
+    change (only for type "select" when changing option)
+    select (only when select text)
+    submit
+
+
+    Get And Set Methods :
+    text
+    HTML
+    attr
+    val
+
+    css()
+    on() off()
+    append() appendTo()
+    prepend() prependTo()
+    wrap() unwrap()
+    after() before()
+    remove() empty() 
+    clone()
+    wrapAll() wrapInner()
+     scrollTop() scrollLeft()
+     has() is()
+     hide() show() toggle()
+     fadeIn() fadeOut() fadeToggle() fadeTo()
+     slideUp() slideDown()
+     animate()
+     stop()
+     hasClass()
+     
+$(selector).hide(speed,callback);
+A callback function is executed after the current effect is 100% finished.
+speed give in millisecond "fast" and "slow"
+
+$("button").click(function(){
+  $("p").hide("slow", function(){
+    alert("The paragraph is now hidden");
+  });
+});
+
+With jQuery, you can chain together actions/methods.
+
+Chaining allows us to run multiple jQuery methods (on the same element) within a single statement.
+
+$("#p1").css("color", "red").slideUp(2000).slideDown(2000);
