@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ajax Tutorial</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+
+<body>
+    <button id="btn">click here</button>
+    <div>
+        <img id="dogImg" src="" alt="">
+    </div>
+    <script>
+        function ajaxFun() {
+            // alert();
+            $.ajax({
+                url: 'https://dog.ceo/api/breeds/image/random',
+                method: 'GET',
+                success: function (result) {
+                    var imgURL = result.message;
+                    $('#dogImg').attr('src', imgURL);
+                }
+            });
+
+            
+                //method 2
+
+            
+            // $.get('https://dog.ceo/api/breeds/image/random', function (data) {
+            //     var imageUrl = data.message;
+            //     $('#dogImg').attr('src', imageUrl);
+            // }).fail(function (xhr, textStatus, errorThrow) {
+            //     console.log('error');
+            // });
+        }
+        $('#btn').click(ajaxFun);
+
+    </script>
+</body>
+
+</html>
